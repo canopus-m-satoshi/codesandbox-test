@@ -94,12 +94,34 @@ const nameArry1 = ["Mike", "Will", "Dustin", "Lucas"];
 // ~は何番目です　としたい時
 // nameArry1.map((name, index) => console.log(`${name}は${index + 1}番目です`)); //Mikeは1番目です Willは2番目です Dustinは3番目です Lucasは4番目です
 
-const newNameArry = nameArry1.map((name) => {
-  if (name === "Mike") {
-    return name;
-  } else {
-    return `Mr ${name}`;
-  }
-});
+// const newNameArry = nameArry1.map((name) => {
+//   if (name === "Mike") {
+//     return name;
+//   } else {
+//     return `Mr ${name}`;
+//   }
+// });
 
-console.log(newNameArry); // ["Mike", "Mr Will", "Mr Dustin", "Mr Lucas"]
+// console.log(newNameArry); // ["Mike", "Mr Will", "Mr Dustin", "Mr Lucas"]
+
+/**
+ * 三項演算子 ? :
+ * ある条件 ? 条件がtrueの時  : 条件がfalseの時
+ */
+
+// const val1 = 1 > 0 ? "true!" : "false!";
+// console.log(val1); // true!
+
+// const num = 1300;
+// // console.log(num.toLocaleString()); // 1,300
+
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "Please set a number";
+
+// console.log(formattedNum); // 1,300
+
+const checkSum = (num1, num2) =>
+  num1 + num2 > 100 ? "Total is over 100" : "Total is less than 100";
+
+console.log(checkSum(10, 50)); // Total is less than 100
+console.log(checkSum(100, 50)); // Total is over 100
