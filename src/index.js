@@ -13,6 +13,22 @@
 
 // arrow function
 
-const plus = (num1, num2) => num1 + num2;
+// const plus = (num1, num2) => num1 + num2;
 
-console.log(plus(1, 20));
+// console.log(plus(1, 20));
+
+// 分割代入
+
+const myProfile = {
+  name: "Sato",
+  age: 27
+};
+
+const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}です`;
+
+console.log(message1);
+
+// 分割代入を設定
+const { name, age } = myProfile;
+const message2 = `名前は${name}です。年齢は${age}です`;
+console.log(message2);
